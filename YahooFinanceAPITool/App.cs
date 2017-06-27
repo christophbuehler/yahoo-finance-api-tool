@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,10 +13,47 @@ namespace YahooFinanceAPITest
     {
         public App()
         {
-            listen();
+            Console.WriteLine("Would you like to use manual entry (0) or bulk mode (1)?");
+            switch (Console.ReadLine())
+            {
+                case "0":
+                    manualMode();
+                    break;
+                case "1":
+                    bulkMode();
+                    break;
+            }
         }
 
-        private void listen()
+        private Config readConfig(string fileName)
+        {
+            return JsonConvert.DeserializeObject<Config>(File.ReadAllText(fileName));
+        }
+
+        private void bulkMode()
+        {
+            string fileName;
+            Console.WriteLine("Configuration file:");
+            string configFileName = Console.ReadLine();
+            Config config = readConfig(configFileName);
+            string dateFrom = config.DateFrom;
+            string dateUntil = config.DateUntil;
+
+            // create the output folder
+            Directory.CreateDirectory(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), config.Dir));
+
+            foreach (string symbol in config.Symbols)
+            {
+                Console.WriteLine("Getting data for {0}..", symbol);
+                fileName = String.Format(config.FileNaming, dateFrom, dateUntil, symbol);
+                var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
+                writeToFile(String.Format("{0}\\{1}", config.Dir, fileName), prices);
+            }
+            Console.WriteLine("Completed!");
+            Console.ReadLine();
+        }
+
+        private void manualMode()
         {
             Console.WriteLine("Symbol:");
             string symbol = Console.ReadLine();
@@ -28,7 +66,7 @@ namespace YahooFinanceAPITest
             string fileName = String.Format("{0}_{1}_{2}.csv", dateFrom, dateUntil, symbol);
             writeToFile(fileName, prices);
             Console.WriteLine(String.Format("Exported data to {0}", fileName));
-            listen();
+            manualMode();
         }
 
         private List<HistoryPrice> getHistoricalPrice(string symbol, DateTime from, DateTime until)
@@ -47,22 +85,31 @@ namespace YahooFinanceAPITest
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName)))
             {
-                file.WriteLine("date;open;close;adjClose;high;low;volume");
+                file.WriteLine("date;open;high;low;close;volume;adjClose");
 
                 foreach (HistoryPrice price in prices)
                 {
                     file.WriteLine(String.Join(";", new string[7] {
                         price.Date.ToShortDateString(),
                         price.Open.ToString(),
-                        price.Close.ToString(),
-                        price.AdjClose.ToString(),
                         price.High.ToString(),
                         price.Low.ToString(),
-                        price.Volume.ToString()
+                        price.Close.ToString(),
+                        price.Volume.ToString(),
+                        price.AdjClose.ToString()
                     }));
                 }
             }
 
         }
+    }
+
+    class Config
+    {
+        public string Dir { get; set; }
+        public string FileNaming { get; set; }
+        public string DateFrom { get; set;  }
+        public string DateUntil { get; set; }
+        public List<string> Symbols { get; set; }
     }
 }

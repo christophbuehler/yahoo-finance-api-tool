@@ -6,3 +6,5 @@ C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFina
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.pdb
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.exe
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.pdb
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.dll
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.xml
