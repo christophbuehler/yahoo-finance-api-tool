@@ -1,9 +1,9 @@
-**Yahoo Finance API Tool**
+# Yahoo Finance API Tool
 
-*manual mode*
+**manual mode**
 
 ![Yahoo Finance API Tool](image.png)
 
-*bulk mode*
+**bulk mode**
 
 ![Yahoo Finance API Tool](image_bulk.png)
