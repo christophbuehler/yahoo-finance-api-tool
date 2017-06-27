@@ -1,8 +1,8 @@
-C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITest.exe.config
-C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITest.exe
-C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITest.pdb
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPI.dll
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPI.pdb
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.csprojResolveAssemblyReference.cache
-C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITest.exe
-C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITest.pdb
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.exe.config
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.exe
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.pdb
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.exe
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.pdb

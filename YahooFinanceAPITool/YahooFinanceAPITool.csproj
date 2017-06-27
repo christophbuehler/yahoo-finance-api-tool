@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EA05DBE0-BB95-419A-826C-3002AD7B21E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>YahooFinanceAPITest</RootNamespace>
-    <AssemblyName>YahooFinanceAPITest</AssemblyName>
+    <RootNamespace>YahooFinanceAPITool</RootNamespace>
+    <AssemblyName>YahooFinanceAPITool</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
