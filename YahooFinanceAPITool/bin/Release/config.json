@@ -1,8 +1,8 @@
 {
     "DateFrom": "2009-04-04",
     "DateUntil": "2017-04-04",
-    "FileNaming": "{symbol}.csv",
-    "Dir": "\\output",
+    "FileNaming": "{2}.csv",
+    "Dir": "output",
     "Symbols": [
         "^DJI",
         "UVXY"

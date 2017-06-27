@@ -47,7 +47,7 @@ namespace YahooFinanceAPITest
                 Console.WriteLine("Getting data for {0}..", symbol);
                 fileName = String.Format(config.FileNaming, dateFrom, dateUntil, symbol);
                 var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
-                writeToFile(String.Format("{0}\\{1}", config.Dir, fileName), prices);
+                writeToFile(String.Format("{0}\\{1}", config.Dir, fileName), symbol, prices);
             }
             Console.WriteLine("Completed!");
             Console.ReadLine();
@@ -64,7 +64,7 @@ namespace YahooFinanceAPITest
             Console.WriteLine("Getting data..");
             var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
             string fileName = String.Format("{0}_{1}_{2}.csv", dateFrom, dateUntil, symbol);
-            writeToFile(fileName, prices);
+            writeToFile(fileName, symbol, prices);
             Console.WriteLine(String.Format("Exported data to {0}", fileName));
             manualMode();
         }
@@ -80,11 +80,12 @@ namespace YahooFinanceAPITest
             return Historical.Get(symbol, from, until);
         }
 
-        private void writeToFile(string fileName, List<HistoryPrice> prices)
+        private void writeToFile(string fileName, string symbol, List<HistoryPrice> prices)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName)))
             {
+                file.WriteLine(symbol);
                 file.WriteLine("date;open;high;low;close;volume;adjClose");
 
                 foreach (HistoryPrice price in prices)
