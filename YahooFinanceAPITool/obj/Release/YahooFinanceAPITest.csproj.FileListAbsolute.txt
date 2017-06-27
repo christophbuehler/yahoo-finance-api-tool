@@ -1,0 +1,8 @@
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\bin\Release\YahooFinanceAPITest.exe.config
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\bin\Release\YahooFinanceAPITest.exe
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\bin\Release\YahooFinanceAPITest.pdb
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\bin\Release\YahooFinanceAPI.dll
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\bin\Release\YahooFinanceAPI.pdb
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\obj\Release\YahooFinanceAPITest.csprojResolveAssemblyReference.cache
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\obj\Release\YahooFinanceAPITest.exe
+c:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITest\YahooFinanceAPITest\obj\Release\YahooFinanceAPITest.pdb

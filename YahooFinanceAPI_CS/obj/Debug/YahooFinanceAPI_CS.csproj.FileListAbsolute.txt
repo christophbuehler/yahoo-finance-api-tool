@@ -1,0 +1,5 @@
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPI-develop\YahooFinanceAPI_CS\bin\Debug\YahooFinanceAPI.dll
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPI-develop\YahooFinanceAPI_CS\bin\Debug\YahooFinanceAPI.pdb
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPI-develop\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI_CS.csprojResolveAssemblyReference.cache
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPI-develop\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.dll
+C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPI-develop\YahooFinanceAPI_CS\obj\Debug\YahooFinanceAPI.pdb
