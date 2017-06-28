@@ -8,3 +8,13 @@ C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFina
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.pdb
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.dll
 C:\Users\2cb\Documents\Visual Studio 2017\Projects\YahooFinanceAPITool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.xml
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.exe.config
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.exe
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\YahooFinanceAPITool.pdb
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.dll
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\YahooFinanceAPI.dll
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\YahooFinanceAPI.pdb
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Release\Newtonsoft.Json.xml
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.csprojResolveAssemblyReference.cache
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.exe
+E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Release\YahooFinanceAPITool.pdb
