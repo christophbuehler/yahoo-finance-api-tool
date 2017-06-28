@@ -38,9 +38,9 @@ namespace YahooFinanceAPITest
             Config config = readConfig(configFileName);
             string dateFrom = config.DateFrom;
             string dateUntil = config.DateUntil;
-
+            
             // create the output folder
-            Directory.CreateDirectory(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), config.Dir));
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), config.Dir));
             
             foreach (string symbol in config.Symbols)
             {
@@ -83,7 +83,7 @@ namespace YahooFinanceAPITest
         private void writeToFile(List<HistoryPrice> prices, string fileName, string symbol, char decimalSeparator)
         {
             using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName)))
+            new System.IO.StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), fileName)))
             {
                 file.WriteLine(symbol);
                 file.WriteLine("date;open;high;low;close;volume;adjClose");

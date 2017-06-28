@@ -1,8 +1,8 @@
 {
-    "DateFrom": "2009-04-04",
-    "DateUntil": "2017-04-04",
+    "DateFrom": "29.04.2009",
+    "DateUntil": "27.06.2017",
     "FileNaming": "{2}.csv",
-    "Dir": "output",
+    "Dir": "Downloads",
 	"DecimalSeparator": ",",
     "Symbols": [
         "^DJI",
