@@ -57,13 +57,13 @@ namespace YahooFinanceAPITest
         {
             Console.WriteLine("Symbol:");
             string symbol = Console.ReadLine();
-            Console.WriteLine("Date from (yyyy-mm-dd):");
+            Console.WriteLine("Date from:");
             string dateFrom = Console.ReadLine();
-            Console.WriteLine("Date until (yyyy-mm-dd):");
+            Console.WriteLine("Date until:");
             string dateUntil = Console.ReadLine();
             Console.WriteLine("Getting data..");
             var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
-            string fileName = String.Format("{0}_{1}_{2}.csv", dateFrom, dateUntil, symbol);
+            string fileName = String.Format("{0}.csv", symbol);
             writeToFile(prices, fileName, symbol, ',');
             Console.WriteLine(String.Format("Exported data to {0}", fileName));
             manualMode();
