@@ -47,7 +47,7 @@ namespace YahooFinanceAPITest
                 Console.WriteLine("Getting data for {0}..", symbol);
                 fileName = String.Format(config.FileNaming, dateFrom, dateUntil, symbol);
                 var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
-                writeToFile(prices, String.Format("{0}\\{1}", config.Dir, fileName), symbol, config.ThousandsDelimiter.ToCharArray()[0]);
+                writeToFile(prices, String.Format("{0}\\{1}", config.Dir, fileName), symbol, config.DecimalSeparator.ToCharArray()[0]);
             }
             Console.WriteLine("Completed!");
             Console.ReadLine();
@@ -80,7 +80,7 @@ namespace YahooFinanceAPITest
             return Historical.Get(symbol, from, until);
         }
 
-        private void writeToFile(List<HistoryPrice> prices, string fileName, string symbol, char thousandsDelimiter)
+        private void writeToFile(List<HistoryPrice> prices, string fileName, string symbol, char decimalSeparator)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName)))
@@ -92,12 +92,12 @@ namespace YahooFinanceAPITest
                 {
                     file.WriteLine(String.Join(";", new string[7] {
                         price.Date.ToShortDateString(),
-                        price.Open.ToString().Replace('.', thousandsDelimiter),
-                        price.High.ToString().Replace('.', thousandsDelimiter),
-                        price.Low.ToString().Replace('.', thousandsDelimiter),
-                        price.Close.ToString().Replace('.', thousandsDelimiter),
-                        price.Volume.ToString().Replace('.', thousandsDelimiter),
-                        price.AdjClose.ToString().Replace('.', thousandsDelimiter),
+                        price.Open.ToString().Replace('.', decimalSeparator),
+                        price.High.ToString().Replace('.', decimalSeparator),
+                        price.Low.ToString().Replace('.', decimalSeparator),
+                        price.Close.ToString().Replace('.', decimalSeparator),
+                        price.Volume.ToString().Replace('.', decimalSeparator),
+                        price.AdjClose.ToString().Replace('.', decimalSeparator),
                     }));
                 }
             }
@@ -112,6 +112,6 @@ namespace YahooFinanceAPITest
         public string DateFrom { get; set;  }
         public string DateUntil { get; set; }
         public List<string> Symbols { get; set; }
-        public string ThousandsDelimiter { get; set; }
+        public string DecimalSeparator { get; set; }
     }
 }

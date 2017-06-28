@@ -3,7 +3,7 @@
     "DateUntil": "2017-04-04",
     "FileNaming": "{2}.csv",
     "Dir": "output",
-	"ThousandsDelimiter": ",",
+	"DecimalSeparator": ",",
     "Symbols": [
         "^DJI",
         "UVXY"
