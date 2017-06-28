@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Net;
 
 namespace YahooFinanceAPI
@@ -130,11 +131,11 @@ namespace YahooFinanceAPI
 
                     HistoryPrice hp = new HistoryPrice();
                     hp.Date = DateTime.Parse(cols[0]);
-                    hp.Open = Convert.ToDouble(cols[1]);
-                    hp.High = Convert.ToDouble(cols[2]);
-                    hp.Low = Convert.ToDouble(cols[3]);
-                    hp.Close = Convert.ToDouble(cols[4]);
-                    hp.AdjClose = Convert.ToDouble(cols[5]);
+                    hp.Open = Convert.ToDouble(cols[1], new CultureInfo("en-US"));
+                    hp.High = Convert.ToDouble(cols[2], new CultureInfo("en-US"));
+                    hp.Low = Convert.ToDouble(cols[3], new CultureInfo("en-US"));
+                    hp.Close = Convert.ToDouble(cols[4], new CultureInfo("en-US"));
+                    hp.AdjClose = Convert.ToDouble(cols[5], new CultureInfo("en-US"));
 
                     //fixed issue in some currencies quote (e.g: SGDAUD=X)
                     if (cols[6] != "null")
