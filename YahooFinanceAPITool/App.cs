@@ -41,13 +41,13 @@ namespace YahooFinanceAPITest
 
             // create the output folder
             Directory.CreateDirectory(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), config.Dir));
-
+            
             foreach (string symbol in config.Symbols)
             {
                 Console.WriteLine("Getting data for {0}..", symbol);
                 fileName = String.Format(config.FileNaming, dateFrom, dateUntil, symbol);
                 var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
-                writeToFile(String.Format("{0}\\{1}", config.Dir, fileName), symbol, prices);
+                writeToFile(prices, String.Format("{0}\\{1}", config.Dir, fileName), symbol, config.ThousandsDelimiter.ToCharArray()[0]);
             }
             Console.WriteLine("Completed!");
             Console.ReadLine();
@@ -64,7 +64,7 @@ namespace YahooFinanceAPITest
             Console.WriteLine("Getting data..");
             var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
             string fileName = String.Format("{0}_{1}_{2}.csv", dateFrom, dateUntil, symbol);
-            writeToFile(fileName, symbol, prices);
+            writeToFile(prices, fileName, symbol, ',');
             Console.WriteLine(String.Format("Exported data to {0}", fileName));
             manualMode();
         }
@@ -80,7 +80,7 @@ namespace YahooFinanceAPITest
             return Historical.Get(symbol, from, until);
         }
 
-        private void writeToFile(string fileName, string symbol, List<HistoryPrice> prices)
+        private void writeToFile(List<HistoryPrice> prices, string fileName, string symbol, char thousandsDelimiter)
         {
             using (System.IO.StreamWriter file =
             new System.IO.StreamWriter(String.Format("{0}\\{1}", Directory.GetCurrentDirectory(), fileName)))
@@ -92,12 +92,12 @@ namespace YahooFinanceAPITest
                 {
                     file.WriteLine(String.Join(";", new string[7] {
                         price.Date.ToShortDateString(),
-                        price.Open.ToString(),
-                        price.High.ToString(),
-                        price.Low.ToString(),
-                        price.Close.ToString(),
-                        price.Volume.ToString(),
-                        price.AdjClose.ToString()
+                        price.Open.ToString().Replace('.', thousandsDelimiter),
+                        price.High.ToString().Replace('.', thousandsDelimiter),
+                        price.Low.ToString().Replace('.', thousandsDelimiter),
+                        price.Close.ToString().Replace('.', thousandsDelimiter),
+                        price.Volume.ToString().Replace('.', thousandsDelimiter),
+                        price.AdjClose.ToString().Replace('.', thousandsDelimiter),
                     }));
                 }
             }
@@ -112,5 +112,6 @@ namespace YahooFinanceAPITest
         public string DateFrom { get; set;  }
         public string DateUntil { get; set; }
         public List<string> Symbols { get; set; }
+        public string ThousandsDelimiter { get; set; }
     }
 }
