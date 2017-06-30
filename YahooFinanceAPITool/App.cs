@@ -13,13 +13,13 @@ namespace YahooFinanceAPITest
     {
         public App()
         {
-            Console.WriteLine("Would you like to use manual entry (0) or bulk mode (1)?");
+            Console.WriteLine("Would you like to use manual entry (m) or bulk mode (b)?");
             switch (Console.ReadLine())
             {
-                case "0":
+                case "m":
                     manualMode();
                     break;
-                case "1":
+                case "b":
                     bulkMode();
                     break;
             }
