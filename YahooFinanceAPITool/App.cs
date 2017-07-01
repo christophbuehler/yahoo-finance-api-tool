@@ -64,6 +64,10 @@ namespace YahooFinanceAPITest
             Console.WriteLine("Getting data..");
             var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
             string fileName = String.Format("Output\\{0}.csv", symbol);
+            
+            // create the output folder
+            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "Output"));
+            
             writeToFile(prices, fileName, symbol, ',');
             Console.WriteLine(String.Format("Exported data to {0}", fileName));
             manualMode();
