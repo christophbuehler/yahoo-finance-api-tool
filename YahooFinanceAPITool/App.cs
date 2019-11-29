@@ -45,11 +45,11 @@ namespace YahooFinanceAPITest
             foreach (string symbol in config.Symbols)
             {
                 Console.WriteLine("Getting data for {0}..", symbol);
-                fileName = String.Format(config.FileNaming, dateFrom, dateUntil, symbol);
+                fileName = string.Format(config.FileNaming, dateFrom, dateUntil, symbol);
                 var prices = getHistoricalPrice(symbol, Convert.ToDateTime(dateFrom), Convert.ToDateTime(dateUntil));
-                writeToFile(prices, String.Format("{0}\\{1}", config.Dir, fileName), symbol, config.DecimalSeparator.ToCharArray()[0]);
+                writeToFile(prices, string.Format("{0}\\{1}", config.Dir, fileName), symbol, config.DecimalSeparator.ToCharArray()[0]);
             }
-            Console.WriteLine("Completed!");
+            Console.WriteLine("Market data download completed successfully.");
             Console.ReadLine();
         }
 

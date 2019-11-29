@@ -18,3 +18,14 @@ E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\Newtonsoft.Json
 E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.csprojResolveAssemblyReference.cache
 E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.exe
 E:\Finanzen\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.pdb
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\YahooFinanceAPITool.exe.config
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\YahooFinanceAPITool.exe
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\YahooFinanceAPITool.pdb
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\Newtonsoft.Json.dll
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\YahooFinanceAPI.dll
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\YahooFinanceAPI.pdb
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\bin\Debug\Newtonsoft.Json.xml
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.csprojAssemblyReference.cache
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.csproj.CopyComplete
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.exe
+C:\projects\yahoo-finance-api-tool\YahooFinanceAPITool\obj\Debug\YahooFinanceAPITool.pdb
